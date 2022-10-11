@@ -12,25 +12,8 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 
 const TopChartCard = ({ song, i }) => (
-  <div className="w-full flex flex-row items-center py-2 p-4 mb-2 cursor-pointer hover:bg-[#4c426e]">
-    <h3 className="font-bold text-white text-base mr-3">
-      {i + 1}.
-    </h3>
-    <div className="flex flex-row flex-1 justify-between items-center">
-      <img
-        className="w-20 h-20 rounded-lg"
-        src={song?.images?.coverart}
-        alt={song?.title}
-      />
-      <div className="flex flex-col flex-1 justify-center mx-3">
-        <Link to={`/songs/${song.key}`}>
-          <p className="text-white font-bold text-xl">{song.title}</p>
-        </Link>
-        <Link to={`/artists/${song?.artists[0].adamid}`}>
-          <p className="text-gray-300 text-base mt-1">{song?.subtitle}</p>
-        </Link>
-      </div>
-    </div>
+  <div className="w-full flex flex-row items-center py-2 p-4 mb-2 cursor-pointer hover:bg-[#4v426e]">
+    {song.title}
   </div>
 );
 
@@ -73,15 +56,15 @@ const TopPlay = () => {
           ))}
         </div>
       </div>
-      <div className="w-full flex flex-col mt-8">
-        <div className="flex flex-row justify-between items-center">
-          <h2 className="text-white text-bold text-2xl">Top Charts</h2>
-          <Link to="/top-charts">
-            <p className="text-gray-300 text-base cursor-pointer">See more</p>
-          </Link>
-        </div>
-      </div>
+      <div className="w-full flex flex-col mt-">
 
+      </div>
+      <div className="flex flex-row justify-between items-center">
+        <h2 className="text-white text-bold text-2xl">Top Charts</h2>
+        <Link to="/top-charts">
+          <p className="text-gray-300 text-base cursor-pointer">See more</p>
+        </Link>
+      </div>
     </div>
   );
 };
